@@ -64,6 +64,6 @@ alter table trenerixgrupe add foreign key (grupa) references grupe (sifra);
 
 alter table vjezbacixgrupe add foreign key (vjezbac) references vjezbaci (sifra);
 
-alter table programi add foreign key (trener) references treneri (sifra);
-
 alter table vjezbacixgrupe add foreign key (grupa) references grupe (sifra);
+
+alter table programi add foreign key (trener) references treneri (sifra);
