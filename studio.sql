@@ -40,16 +40,11 @@ trener int
 create table grupe (
 sifra int not null primary key identity (1,1),
 naziv varchar (50),
-trener int not null,
 program int not null,
 datumpocetka datetime,
 maksimalanbrojvjezbaca int
 );
 
-create table trenerixgrupe (
-trener int not null,
-grupa int not null
-);
 
 create table vjezbacixgrupe (
 vjezbac int not null,
@@ -57,10 +52,6 @@ grupa int not null
 );
 
 alter table grupe add foreign key (program) references programi (sifra);
-
-alter table trenerixgrupe add foreign key (trener) references treneri (sifra);
-
-alter table trenerixgrupe add foreign key (grupa) references grupe (sifra);
 
 alter table vjezbacixgrupe add foreign key (vjezbac) references vjezbaci (sifra);
 
